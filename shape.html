@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        SHAPE MAKE
+    </title>
+    <h2>
+        tell us youe size
+        <br>
+        give your shape
+    </h2>
+
+</head>
+
+<body>
+    <div id="myDive">
+
+    </div>
+
+    <style>
+        #myDive {
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+
+    <label> Border Width:</label>
+    <input id="Border Width" value="1" type="number">
+
+    <br>
+
+    <label> Border Type:</label>
+    <select id="Border Type">
+        <option value="solid" selected>solid</option>
+        <option value="doted" selected> doted </option>
+        <option value="dashed" selected> dashed</option>
+    </select>
+    <br>
+
+    <label> Border Color:</label>
+    <input id="Border Color" value="yellow">
+
+    <br>
+
+    <label> Background Color:</label>
+    <input id="Background Color" value="purple">
+
+    <br>
+
+    <button onclick="Create()">
+        Create !
+    </button>
+
+    <script>
+        function Create() {
+
+            var $borderWidth = document.getElementById("Border Width").value;
+            var $borderType = document.getElementById("Border Type").value;
+            var $borderColor = document.getElementById("Border Color").value;
+            var $backgroundColor = document.getElementById("Background Color").value;
+
+
+            var $myDiv = document.getElementById("myDiv");
+            $myDiv.style.border = $borderWidth + " px " + $borderType + " " + $borderColor;
+            $myDiv.style.backgroundColor = $backgroundColor;
+
+        }
+
+        document.head.style.backgroundColor = "purple"
+        document.head.style.color = "yellow"
+
+
+    </script>
+
+
+</body>
